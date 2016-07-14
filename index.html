@@ -3,7 +3,7 @@
 
 <head>
     <!--WELLCOME YOU :))) -->
-    <title>#TOICHONCA - VCCORP 2016</title>
+    <title id="titleTXT">#TOICHONCA - VCCORP 2016</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
     <script src="sweetalert.js"></script>
     <nav>
         <div class="nav-wrapper blue">
-            <a href="#" class="brand-logo center">#TOICHONCA - VCCORP 2016</a>
+            <a href="#" id="navTXT" class="brand-logo center">#TOICHONCA - VCCORP 2016</a>
         </div>
     </nav>
     <div class="container">
@@ -101,6 +101,8 @@
             updateText();
         });
         updateText();
+
+
     });
     //Get choice
     $("body").mousemove(function(event) {
@@ -125,6 +127,11 @@
     });
     //Update
     function updateText() {
+
+
+        $("#titleTXT").text('#' + $("#ip").val().toUpperCase() + 'CHONCA - VCCORP 2016');
+        $("#navTXT").text('#' + $("#ip").val().toUpperCase() + 'CHONCA - VCCORP 2016');
+
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
         var img = document.getElementById("img");

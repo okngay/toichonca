@@ -35,7 +35,7 @@
                     <div class="">
                         <div class="input-field">
                             <span class="card-title activator grey-text text-darken-4 col s5">Tên của bạn:</span>
-                            <input value="" id="ip" type="text" class="validate col s7 card-title">
+                            <input value="TÔI" id="ip" type="text" class="validate col s7 card-title">
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="">
                         <div class="input-field">
                             <span class="card-title activator grey-text text-darken-4 col s3">Slogan: </span>
-                            <input id="ip2" value="Cùng #tôi chọn #cá!" type="text" class="validate col s9 card-title">
+                            <input id="ip2" value="Cùng #tôi chọn #cá!" type="text" class="validate col s9 card-title tooltipped" data-position="top" data-delay="50" data-tooltip="Nhập #tôi,#cá,#biển,#hãy,#vn  để hiển thị nổi bật hơn!">
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
         //Check Text engine 0.1
         var str = $("#ip2").val();
         var txt = str;
-        txt = str.replace(/#cá|#biển|#tôi|#hãy/gi, function myFunction(x) {
+        txt = str.replace(/#cá|#biển|#tôi|#hãy|#vn/gi, function myFunction(x) {
             if (x == "#tôi") {
 
                 if ($("#luachon").val() == 3) {
@@ -198,6 +198,11 @@
             if (x == "#hãy") {
                 return '<style="font-weight:bold;color:#fd9901;font-size:40px">HÃY</style>';
             }
+
+            if (x == "#vn") {
+                return '<style="font-weight:bold;color:#ff1010;font-size:40px">Việt</style><style="font-weight:bold;color:#ffff00;font-size:40px">Nam</style>';
+            }
+
 
         });
         var text = txt;

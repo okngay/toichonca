@@ -1,0 +1,28 @@
+body {
+    background-image: url("http://eskipaper.com/images/cool-sea-wallpaper-1.jpg");
+}
+
+#text {
+    z-index: 100;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    left: 150px;
+    top: 370px;
+}
+
+#slogan {
+    z-index: 100;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    top: 00px;
+    left: 10px;
+}
+
+#name {
+    z-index: 100;
+    position: absolute;
+    font-size: 60px;
+    left: 10px;
+}

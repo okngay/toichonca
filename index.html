@@ -2,7 +2,10 @@
 <html>
 
 <head>
+    <!--WELLCOME YOU :))) -->
     <title>#TOICHONCA - VCCORP 2016</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <script src="CanvasText-0.4.1.js"></script>
     <!--Import Google Icon Font-->
@@ -81,6 +84,8 @@
     </div>
     <img id="img" src="fish.jpg" style="display : none;" alt="The Scream" width="220" height="277">
     <script>
+    console.log(':))))');
+    //Get key
     $(document).ready(function() {
         $("#slogan").text($("#ip2").val());
         $("#ip").keydown(function() {
@@ -97,7 +102,7 @@
         });
         updateText();
     });
-
+    //Get choice
     $("body").mousemove(function(event) {
         if ($("#luachon").val() == 1) {
             document.getElementById('img').src = "fish.jpg";
@@ -118,12 +123,10 @@
         updateText();
 
     });
-    ///////////////////////////////////////////
+    //Update
     function updateText() {
-        // alert('message');
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-
         var img = document.getElementById("img");
         ctx.drawImage(img, 0, 0, 500, 500);
         ctx.font = "40px Arial";
@@ -146,21 +149,17 @@
         ctx.font = "40px Arial";
         ctx.fillText('#TÔI' + " ", 160, 480);
         var canvas = document.getElementById("myCanvas");
-
     }
     myCanvas();
 
-    // Definition of global vars
     var Canvas, Context;
-    // Creation of the new CanvasText instance.
     var CT = new CanvasText();
-    // Our canvas element must be loaded before the usage of CanvasText.
+    //Load
     window.onload = initCanvasText;
 
     function initCanvasText() {
         Canvas = document.getElementById("myCanvas");
         Context = Canvas.getContext("2d");
-        // Once window is loaded we set the configuration and the default styles.
         var colorTXT = '#000';
         if ($("#luachon").val() == 5 || $("#luachon").val() == 3) {
             colorTXT = 'white';
@@ -174,8 +173,8 @@
             fontColor: colorTXT,
             lineHeight: "45"
         });
-        /* Write the text (with or without styles) */
 
+        //Check Text engine 0.1
         var str = $("#ip2").val();
         var txt = str;
         txt = str.replace(/#cá|#biển|#tôi|#hãy/gi, function myFunction(x) {
@@ -202,9 +201,7 @@
 
         });
         var text = txt;
-        /**
-         * Draw the text without automatic line break.
-         */
+        //Draw Text
         CT.drawText({
             text: text,
             x: 5,
@@ -215,6 +212,7 @@
 
     }
 
+    //Show Dialog 
     function downloadButton() {
         swal('Hướng dẫn', 'Di chuyển chuột đến hình ảnh sau đó bấm chuột phải chọn "Lưu hình ảnh thành..." để lưu hình!', "info");
     }
